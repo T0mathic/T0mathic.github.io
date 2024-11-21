@@ -13,7 +13,7 @@ body {
     padding-top: 147px;
 }
 
-.page-header {
+.page-header{
     position: fixed;
     top: 0;
     left: 0;
@@ -22,12 +22,12 @@ body {
     background-color: green;
 }
 
-.main {
+.main{
     flex: 1 0 auto;
     background-color: aquamarine;
 }
 
-.page-footer {
+.page-footer{
     flex: 0 0 auto;
     background-color: blueviolet;
 }

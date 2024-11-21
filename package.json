@@ -4,6 +4,9 @@
   "description": "course junior frontend-developer",
   "author": "si@tagree.ru",
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/register": "^7.25.9",
     "autoprefixer": "^10.4.20",
     "browser-sync": "^2.29.3",
     "del": "^6.0.0",

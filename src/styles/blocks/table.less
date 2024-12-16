@@ -1,0 +1,136 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #1F1E1E;
+    text-align: center;
+
+    @media @bw768{
+      margin: 0 -20px;
+      display: block;
+      width: calc(100% + 40px);
+    }
+
+    &__head,
+    &__body,
+    &__footer {
+      @media @bw768{
+        display: block;
+      }
+    }
+
+    &__head-tr {
+      @media @bw768{
+        display: flex;
+      }
+    }
+    
+    &__tr {
+      &:nth-child(2n-1) {
+        background-color: fade(#1F1E1E, 3%);
+      }
+
+      @media @bw768{
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__th {
+      height: 85px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+
+      @media @bw768 {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33.3333%;
+        height: auto;
+      }
+      &:first-child {
+        @media @bw768 {
+          display: flex;
+      }
+    }
+  }
+
+  &__footer-tr {
+    @media @bw768{
+      display: flex;
+    }
+  }
+
+  &__footer-th {
+    height: 60px;
+    font-size: 0;
+
+    @media @bw768{
+      width: 33.3333%;
+      font-weight: 300px;
+      font-size: 16px;
+    }
+
+    &:first-child {
+      @media @bw768 {
+        display: flex;
+      }
+    }
+  }
+
+    &__th,
+    &__footer-th {
+      box-sizing: border-box;
+      padding: 10px;
+      border-right: 1px solid #BFBFBF;
+      text-transform: uppercase;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    &__body-th {
+      box-sizing: border-box;
+      height: 50px;
+      padding: 10px 10px 10px 0;
+      border-top: 1px solid #BFBFBF;
+      border-bottom: 1px solid #BFBFBF;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: left;
+
+      @media @bw768{
+        display: block;
+        width: 100%;
+        min-height: 50px;
+        height: auto;
+        text-align: center;
+      }
+    }
+    
+    &__td {
+      box-sizing: border-box;
+      height: 50px;
+      padding: 10px;
+      border: 1px solid #BFBFBF;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+
+      @media @bw768{
+        display: block;
+        width: 33.3333%;
+      }
+  
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+}

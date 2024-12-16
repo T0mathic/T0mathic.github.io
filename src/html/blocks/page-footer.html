@@ -1,14 +1,41 @@
-<!DOCTYPE html>
-<html lang="ru">
-  @@include('blocks/head.html')
-  
-  <body class="body">
-    @@include('blocks/page-header.html')
-    
-    <main class="main">
-      <!-- содержимое страницы -->
-    </main>
-    
-    @@include('blocks/page-footer.html')
-  </body>
-</html>
+<footer class="page-footer">
+    <div class="page-footer__first">
+        <div class="page-footer__line"></div>
+        <div class="page-footer__line"></div>
+    </div>
+    <div class="page-footer__container">
+        <div class="page-footer__list">
+            <a href="#">Календарь мероприятий</a>
+            <a href="#">Провести мероприятие</a>
+            <a href="#">Стать арендатором</a>
+            <a href="#">Наши проекты</a>
+            <a href="#">Контакты</a>
+        </div>
+        <div class="page-footer__check">
+            <p>Подпишись и будь в курсе происходящего</p>
+            <div class="page-footer__buttons">
+                <input
+                    class="page-footer__field-input"
+                    type="email"
+                    placeholder="Email*"
+                    name="Email"
+                    required
+                />
+                <button type="button" class="page-footer__btn">Подписаться</button>
+            </div>
+              <label class="check">
+                <input
+                  type="checkbox"
+                  name="agree"
+                  class="check__input"
+                  required
+                  checked
+                />
+               <span class="check__mark"></span>
+               <span class="check__label check__label--s">
+                Согласен на обработку персональных данных
+                </span>
+              </label>
+        </div>
+    </div>
+</footer>

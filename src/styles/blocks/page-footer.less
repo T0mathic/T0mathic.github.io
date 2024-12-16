@@ -1,0 +1,127 @@
+.page-footer{
+    width: 100%;
+    max-width: 1414px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: @gray;
+
+    &__first {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &__line {
+        height: 2px;
+        width: 618px;
+        margin-right: 50px;
+        background-color: rgba(28, 27, 27, 1);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__container,
+    &__buttons {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    &__buttons {
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 60px;
+        margin-top: 50px;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 4px;
+            height: 198px;
+            background-color: @red;
+            pointer-events: none;
+            margin-left: 40px;
+        }
+    }
+
+    a {
+        font-weight: 600;
+        font-size: 16px;
+        color: @black;
+        text-decoration: none;
+        text-decoration-color: @black;
+        transition: text-decoration-color 0.2s;
+        cursor: pointer;
+        margin-bottom: 22px;
+        &:hover {
+          text-decoration-color: transparent;
+          color: @red;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__check {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: 600px;
+        margin-top: 45px;
+    }
+
+    p {
+        font-weight: 600;
+        font-size: 16px;
+        color: @black;
+    }
+
+    &__field-input {
+        box-sizing: border-box;
+        display: block;
+        width: 270px;
+        border: none;
+        border-radius: 5px;
+        background-color: @white;
+        font-size: 16px;
+        line-height: 1.375;
+        height: 49px;
+        padding-left: 30px;
+    }
+
+    &__btn {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 135px;
+        height: 49px;
+        border: 1px solid @black;
+        background-color: transparent;
+        outline: none;
+        color: @white;
+        background-color: @black;
+        font-family: @font1;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}

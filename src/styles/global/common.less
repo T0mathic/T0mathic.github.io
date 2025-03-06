@@ -1,17 +1,16 @@
-html,
-body{
-    margin:0;
+html,body {
+    width: 100%; 
+    margin: 0;
     padding: 0;
-    width: 100%;
 }
-
-body {
+  
+.body {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: @gray;
-    // background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
+    background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
     background-position: 0 0, 0 0;
     background-size: auto, 100% auto;
     background-repeat: repeat, repeat-y;
@@ -24,29 +23,28 @@ body {
     overflow-x: hidden;
     padding-top: 147px;
 
-    @media @bw1660 {
+    @media @bw1660{
       padding-top: 111px;
     }
-    
-    @media @bw768 {
+
+    @media @bw768{
       padding-top: 70px;
     }
 }
-
-.main{
+  
+.main {
     flex: 1 0 auto;
 }
-
-.page-footer{
+  
+.page-footer {
     flex: 0 0 auto;
-    background-color: blueviolet;
 }
-
+  
 a {
-    color: #1F1E1E;
+    color: @black;
     outline: none;
 }
-
+  
 img {
     max-width: 100%;
     height: auto;
@@ -72,7 +70,6 @@ textarea {
     color: #6C6C6C;
   }
 }
-
 input:focus,
 textarea:focus {
   &::placeholder {

@@ -1,127 +1,241 @@
-.page-footer{
-    width: 100%;
-    max-width: 1414px;
-    margin: 0 auto;
-    margin-top: 70px;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: @gray;
+.page-footer {
+    .container;
+    padding-bottom: 75px;
+    margin-top: 150px;
 
-    &__first {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
-        padding-left: 40px;
-        padding-right: 40px;
+    @media @bw1170 {
+        padding-bottom: 60px;
     }
 
-    &__line {
-        height: 2px;
-        width: 618px;
-        margin-right: 50px;
-        background-color: rgba(28, 27, 27, 1);
+    @media @bw600 {
+        padding-bottom: 50px;
+    }
 
-        &:last-child {
-            margin-right: 0;
+    &__liners {
+        display: flex;
+        margin-bottom: 60px;
+        gap: 100px;
+
+        @media @bw1660 {
+            gap: 90px;
+        }
+
+        @media @bw1020 {
+            gap: 50px;
+        }
+
+        @media @bw600 {
+            gap: 20px;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            flex-grow: 1;
+            width: 2px;
+            height: 2px;
+        }
+
+        &::before {
+            background: linear-gradient(
+                270deg,
+                #1c1b1b 0%,
+                rgba(255, 255, 255, 0) 82.86%
+            );
+        }
+
+        &::after {
+            background: linear-gradient(
+                90deg,
+                #1c1b1b 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
         }
     }
 
-    &__container,
-    &__buttons {
-        box-sizing: border-box;
+    &__block1 {
         display: flex;
-        flex-direction: row;
+        gap: 50px;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        @media @bw768{
+            flex-direction: column;
+        }
+    }
+
+    &__block1-links {
         position: relative;
-    }
-
-    &__buttons {
-        margin-bottom: 15px;
-    }
-
-    &__list {
-        box-sizing: border-box;
+        padding-left: 26px;
         display: flex;
         flex-direction: column;
-        position: relative;
-        padding-left: 60px;
-        margin-top: 50px;
+        gap: 22px;
+
+        @media @bw768{
+            padding: 2px 26px;
+        }
+
         &::before {
             content: "";
-            display: block;
             position: absolute;
-            top: 0px;
+            top: 0;
+            bottom: 0;
             left: 0;
             width: 4px;
-            height: 198px;
             background-color: @red;
-            pointer-events: none;
-            margin-left: 40px;
         }
     }
 
-    a {
+    &__block1-link {
         font-weight: 600;
         font-size: 16px;
-        color: @black;
+        line-height: 1.3;
         text-decoration: none;
-        text-decoration-color: @black;
-        transition: text-decoration-color 0.2s;
-        cursor: pointer;
-        margin-bottom: 22px;
+        color: @black;
+        transition: color 0.2s;
+
         &:hover {
-          text-decoration-color: transparent;
-          color: @red;
+            @media (hover: hover) {
+                color: @red;
+            }
         }
-        &:last-child {
-            margin-bottom: 0;
+
+        &:active {
+            color: @red;
         }
     }
 
-    &__check {
-        box-sizing: border-box;
+    &__block2{
+        display: grid;
+        grid-template-columns: 1fr 160px 1fr;
+        grid-template-areas: 
+            "copyright socials create"
+            "links socials create";
+        
+        @media @bw1020{
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "socials socials"
+                "copyright copyright"
+                "links create";
+        }
+
+        @media @bw768{
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "socials"
+                "links"
+                "copyright"
+                "create";
+        }
+    }
+
+    &__socials{
+        grid-area: socials;
+
+        @media @bw1020{
+            margin: 0 auto 60px;
+        }
+    }
+
+    &__block2-links{
+        grid-area: links;
         display: flex;
-        flex-direction: column;
-        position: relative;
-        margin-left: 600px;
-        margin-top: 45px;
+        gap: 60px;
+
+        @media @bw1340{
+            gap: 30px;
+        }
+
+        @media @bw1020{
+            gap: 15px; 
+        }
+
+        @media @bw768{
+           flex-direction: column;
+           gap: 20px;
+        }
     }
 
-    p {
+    &__block2-link{
         font-weight: 600;
         font-size: 16px;
-        color: @black;
+        line-height: 1.3;
+        text-decoration: none;
+        transition: color 0.2s;
+
+        @media @bw1020{
+            font-size: 14px;
+        }
+
+        &:hover{
+            @media (hover: hover){
+                color: @red;
+            }
+        }
+
+        &:active{
+            color: @red;
+        }
     }
 
-    &__field-input {
-        box-sizing: border-box;
-        display: block;
-        width: 270px;
-        border: none;
-        border-radius: 5px;
-        background-color: @white;
+    &__copyright{
+        grid-area: copyright;
+        margin-bottom: 20px;
+
+        @media @bw1020{
+            font-size: 14px;
+        }
+
+        @media @bw768{
+            margin-left: auto;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__create{
+        grid-area: create;
+        align-self: flex-end;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-weight: 600;
         font-size: 16px;
-        line-height: 1.375;
-        height: 49px;
-        padding-left: 30px;
+        line-height: 1.3;
+
+        @media @bw1020{
+            font-size: 14px;
+        }
     }
 
-    &__btn {
-        display: inline-block;
-        box-sizing: border-box;
-        width: 135px;
-        height: 49px;
-        border: 1px solid @black;
-        background-color: transparent;
-        outline: none;
-        color: @white;
-        background-color: @black;
-        font-family: @font1;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 19px;
-        text-align: center;
-        overflow: hidden;
-        cursor: pointer;
+    &__create-link{
+        //display: block;
+        flex-shrink: 0;
+        font-size: 0;
+        color: @black;
+        line-height: 0;
+        transition: color 0.2s;
+
+        &:hover{
+            @media (hover: hover){
+                color: @red;
+            }
+        }
+
+        &:active{
+            color: @red;
+        }
+
+        @media @bw768{
+            width: 60px;
+            height: 27px;
+        }
+    }
+
+
+    &__create-link-icon{
+        width: 100%;
+        height: 100%;
     }
 }

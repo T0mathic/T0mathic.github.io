@@ -1,32 +1,26 @@
 .radio {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 15px;
     
     &__item {
-        box-sizing: border-box;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-bottom: 15px;
-        min-height: 23px;
-        padding-left: 23px;
-        color: @black;
-        cursor: pointer;
-        
-        &:last-child {
-            margin-bottom: 0;
-        }
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 23px;
+      padding-left: 23px;
+      color: @black;
+      cursor: pointer;
     }
 
     &__input {
-        .is-hidden();
-
+        .is-hidden;
         &:checked {
-            &~.radio__mark {
-              background-color: @black;
-            }
+          &~.radio__mark {
+            background-color: @black;
+          }
         }
     }
 
@@ -45,7 +39,6 @@
         background-color: transparent;
         transition: background-color 0.2s;
     }
-
     &__label {
         margin-left: 20px;
         font-weight: 400;
